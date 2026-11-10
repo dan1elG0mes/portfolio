@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabeçalho">
+        <h1>Meu Portfólio</h1>
+    </header>
+
+    <aside class="perfil-dev">
+        <div class="foto-perfil">👨🏻‍💻</div>
+        <h2>Daniel</h2>
+        <p class="bio">Dev Júnior e estudante de programaçao</p>
+        
+        <div class="habilidades">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JS</span>
+        </div>
+    </aside>
+
+    <section class="conteudo-principal">
+        <nav class="filtros">
+            <button class="btn-filtros ativo" data-filtro="todos">Todos</button>
+            <button class="btn-filtros" data-filtro="code-org">Code.org</button>
+            <button class="btn-filtros" data-filtro="vs">JS Vanilla</button>
+            <button class="btn-filtros" data-filtro="site">Sites</button>
+        </nav>
+
+        <main id="galeria" class="galeria-projetos"></main>
+    </section>
+
+    <footer class="rodape">
+        <p> Desenvolvido com HTML,CSS Grid e JavaScript.</p>
+    </footer>
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

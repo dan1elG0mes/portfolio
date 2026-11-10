@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #334155;
+
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+
+    grid-template-columns: 1fr;
+    grid-template-areas: "cabeçalho" "perfil-dev" "conteudo" "rodape";
+}
+
+/* telas grandes */
+@media (min-width: 900px){
+    body {
+        padding: 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+
+        grid-template-columns: 300px 1fr;
+        grid-template-areas: "cabeçalho cabeçalho" "perfil-dev conteudo" "rodape rodape";
+    }
+}
+
+.cabeçalho {grid-area: cabeçalho;}
+.perfil {grid-area: perfil-dev;}
+.conteudo-principal {grid-area: conteudo;}
+.rodape {grid-area: rodape;}
+
+.perfil-dev {
+    background-color: #FFF;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.foto-perfil {
+    width: 130px;
+    height: 130px;
+    font-size: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem auto;
+    background-color: #f1f5f9;
+    border-radius: 50%;
+    border: 4px solid #FFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.perfil-dev h2 {
+    color: #0f172a; 
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cabeçalho{
+    padding: 3rem 1rem;
+    background-color: #FFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e3e1e1;
+}
+
+.cabeçalho h1 {
+    color: #0f172a;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.bio {
+    color:#647488 ;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+}
+
+.habilidades span{
+    background-color:#f1f5f9;
+    color: #3b82f6;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.habilidades span:hover {
+    background-color: #3b82f6;
+    color: #f1f5f9;
+}
+
+.filtros{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.1rem 2.5rem 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-filtros{
+    padding: 0.7rem 1.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #FFF;
+    color: #647488;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-filtros:hover{
+    background-color: #f1f5f9;
+    color: #0f172a;
+    transform: translateY(-2px);
+}
+
+.btn-filtros.ativo{
+    background-color: #3b82f6;
+    color: #FFF;
+    border-color: #3b82f6;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.rodape{
+    background-color: #0f172a;
+    border-radius:12px ;
+    color: #FFF;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.galeria-projetos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card{
+    background-color: #FFF;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.card-imagem{
+    height: 260px;
+    overflow: hidden;
+    background-color: #0f172a;
+    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+}
+
+.card-imagem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card:hover .card-imagem img{
+    transform: scale(1.08);
+}
+
+.card-conteudo {
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-conteudo h3 {
+    color: #0f172a;
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+}
+
+.card-conteudo p {
+    color: #647488;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.btn-link{
+    display: block;
+    text-align: center;
+    background-color: #0f172a;
+    color: #FFF;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-link:hover{
+    background-color: #3b82f6;
+    box-shadow: 0 4px 10px rgba(59, 130, 240, 0.3);
+}
+
+@media (min-width: 768px) {
+    .card.destaque { 
+        grid-column: span 2; 
+    }
+}
